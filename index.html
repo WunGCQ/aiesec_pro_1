@@ -35,18 +35,18 @@
             width: 100%;
             height: auto;
             overflow: hidden;
-            background: rgba(141,198,63,0.2) 50% 50% / cover no-repeat;
+            background: rgba(141,198,63,0.3) 50% 50% / cover no-repeat;
         }
 
         #map-row {
             border-top: 1px solid #ccc;
             display: block;
-            padding: 2% 10%;
+            padding: 0% 10%;
             display: block;
             text-align: center;
             width: 100%;
             height: 100%;
-            background: rgba(141,198,63,0.2) 50% 50% / cover no-repeat;
+            background: rgba(141,198,63,0.3) 50% 50% / cover no-repeat;
         }
 
         #header-circle {
@@ -265,6 +265,7 @@
     </div>
 
     <div id="map-row">
+        <h3>read the map to find your partners!</h3>
         <div id="committee_map_wrapper" style="width: 436px; height: 400px;">
 
             <img src="images/mapa2.png" alt="Mapa komitetów" width="436" height="424" class="top hide-for-small">
@@ -407,6 +408,28 @@
                 var yy=Math.floor(($("#header").outerHeight()-$("#title").outerHeight())/2);
                 //$("#header-circle").css({"left": x.toString()+"px",top:50});
                 $("#title").css({"left": xx.toString()+"px",top:(yy-50)});
+
+
+        var o_height=400;
+        var o_width=436;
+            var zoom;
+            tmp1=3;
+            while(window_width<Math.floor(tmp1*o_width)){
+                tmp1-=0.1;
+            }
+            tmp1-=0.2;
+
+
+            tmp2=3;
+            while(window_height<Math.floor(tmp2*o_height)){
+                tmp2-=0.1;
+            }
+            tmp2-=0.2;
+            zoom=(tmp1>tmp2)?tmp2:tmp1;
+
+
+        $("#committee_map_wrapper").css("zoom",zoom);
+
     }
     reset();
 
