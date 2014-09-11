@@ -62,7 +62,7 @@ a.map_link , a:hover.map_link{
     height:424px;
     vertical-align:top;
     margin:0 auto;
-    zoom:2;
+    zoom:1.8;
 }
 
 #committee_map_wrapper img {

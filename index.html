@@ -35,17 +35,18 @@
             width: 100%;
             height: auto;
             overflow: hidden;
-            background: #eee 50% 50% / cover no-repeat;
+            background: rgba(141,198,63,0.2) 50% 50% / cover no-repeat;
         }
 
         #map-row {
+            border-top: 1px solid #ccc;
             display: block;
             padding: 2% 10%;
             display: block;
             text-align: center;
             width: 100%;
             height: 100%;
-            background: #ccc 50% 50% / cover no-repeat;
+            background: rgba(141,198,63,0.2) 50% 50% / cover no-repeat;
         }
 
         #header-circle {
@@ -109,18 +110,23 @@
 
         p {
             font-size: 1.3em;
-            color: #333;
-            font-family: Georgia,'TimesClassicText',Museo, Century Gothic, Trebuchet MS, Helvetica, Arial, sans-serif;
+            color: #000;
+            font-family: Museo, Century Gothic, Trebuchet MS, Helvetica, Arial, sans-serif;
+            margin: 2em 0;
         }
 
         .intro-block {
-            padding: 2% 2%;
-            width: 30%;
+
+            padding: 2% 3%;
+
+            width: 32%;
             float: left;
-            margin: 0 auto;
+            margin: 0 0.3%;
             text-align: justify;
             display: block;
             height: 100%;
+            background: rgba(141,198,63,0.1);
+
         }
 
             .intro-block .title {
@@ -137,9 +143,9 @@
         }
 
         .intro-list {
-            font-family: Georgia,Museo;
+            font-family: Museo;
             font-size: 1.3em;
-            color: #555;
+            color: #333;
         }
         .map_tooltip-up_hover{
             z-index: 0;
@@ -153,6 +159,7 @@
             height: auto;
             color: #FFF;
         }
+
     </style>
 </head>
 
@@ -253,31 +260,7 @@
             </p>
         </div>
 
-        <div class="intro-block">
-            <div class="icon-row">
-                <img src="images/2014-09-11_165127.jpg" alt="" class="intro-icon" />
-            </div>
-            <div class="title">
-                <span>Here is your title</span>
-            </div>
-            <p>
-                here is the detail things about the intro! here is the detail things about the intro!<br>
-                here is the detail things about the intro!<br>
-            </p>
-            <ul class="intro-list">
-                <li>and right here  is your list content about everthing!</li>
-                <li>and right here  is your list content about everthing!</li>
-                <li>and right here  is your list content about everthing!</li>
-                <li>and right here  is your list content about everthing!</li>
-                <li>and right here  is your list content about everthing!</li>
 
-            </ul>
-
-            <p>
-                here is the detail things about the intro! here is the detail things about the intro!<br>
-                here is the detail things about the intro!<br>
-            </p>
-        </div>
 
     </div>
 
@@ -415,6 +398,7 @@
         var window_height = $(window).outerHeight();
 
         $("#header").css({ "height": window_height.toString() + "px" });
+        $("#map-row").css({ "height": window_height.toString() + "px" });
 
         $("#map").css({ "height": $(window).outerHeight().toString() + "px" });
 
