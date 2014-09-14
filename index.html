@@ -440,14 +440,14 @@
         var o_height=400;
         var o_width=436;
             var zoom;
-            tmp1=3;
+            var tmp1=3;
             while(window_width<Math.floor(tmp1*o_width)){
                 tmp1-=0.1;
             }
             tmp1-=0.1;
 
 
-            tmp2=3;
+            var tmp2=3;
             while(window_height<Math.floor(tmp2*o_height)){
                 tmp2-=0.1;
             }
@@ -456,6 +456,8 @@
 
 
         $("#committee_map_wrapper").css("zoom",zoom);
+        $("#committee_map_wrapper").css("-moz-transform","scale("+zoom+")");
+
 
     }
     reset();

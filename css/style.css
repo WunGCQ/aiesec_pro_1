@@ -56,7 +56,7 @@ a.map_link , a:hover.map_link{
 }
 #committee_map_wrapper {
     font-family:'Open Sans', sans-serif;
-    
+
     position: relative;
     display:inline-block;
     width:452px;
@@ -64,6 +64,8 @@ a.map_link , a:hover.map_link{
     vertical-align:top;
     margin:0 auto;
     zoom:2;
+    -moz-transform:scale(2);
+    -moz-transform-origin:top;
 }
 
 #committee_map_wrapper img {
