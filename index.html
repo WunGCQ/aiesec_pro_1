@@ -14,6 +14,7 @@
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
     <script src="script/bootstrap.min.js"></script>
     <script src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/jquery.scrollTo.js"></script> 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <style>
@@ -191,9 +192,9 @@
     <div id="header">
 		
         <ul id="nav">
-            <li><a href="#sector1">link to first sector</a></li>
-            <li><a href="#sector2">link to second sector</a></li>
-            <li><a href="#sector3">link to third sector</a></li>
+            <li id="nav-1"><a>link to first sector</a></li>
+            <li id="nav-2"><a>link to second sector</a></li>
+            <li id="nav-3"><a>link to third sector</a></li>
         </ul>
         <div id="header-circle"><img src="images/circle.png" /></div>
         <img src="images/AIESEC.png" alt="" id="header-AIESEC" />
@@ -290,7 +291,7 @@
 
     </div>
 
-    <div id="map-row" >
+    <div id="map-row">
 		<a name="sector3" class="hidden-a"></a>
         <h3>read the map to find your partners!</h3>
         <div id="committee_map_wrapper" style="width: 436px; height: 400px;">
@@ -458,9 +459,21 @@
         $("#committee_map_wrapper").css("zoom",zoom);
         $("#committee_map_wrapper").css("-moz-transform","scale("+zoom+")");
 
+        
+          
+         
 
     }
     reset();
+    $("#nav-1").click(function(){ 
+            $.scrollTo('#header',500); 
+    }); 
+    $("#nav-2").click(function(){ 
+            $.scrollTo('#intro',500); 
+        }); 
+    $("#nav-3").click(function(){ 
+            $.scrollTo('#map-row',500); 
+        });
 
 </script>
 </html>
