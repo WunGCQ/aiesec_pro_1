@@ -3,26 +3,18 @@
     src: url('../fonts/Novecentosanswide-Normal-webfont.woff');
 }
 @font-face {
-    font-family: 'lobster 1.3';
-    src: url('../fonts/Lobster 1.3.otf');
-}
-@font-face {
-    font-family:'comfortaa';
-    src: url('../fonts/Comfortaa-Regular.ttf');
-}
-@font-face {
     font-family: 'Museo';
     src: url('../fonts/Museo100-Regular.otf');
 }
-@font-face {
-    font-family: 'TimesClassicText';
-    src: url('../fonts/TimesClassicText-Smallcaps-Roman.woff');
-}
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2');
-}
 
+@font-face {
+    font-family:'LOBSTER' ;
+    src: url('../fonts/Lobster/Lobster%201.4.otf');
+}
+@font-face {
+    font-family: 'comfortaa';
+    src: url('../fonts/Comforta/Comfortaa-Regular.ttf');
+}
 
 .green{
     background-color: rgb(141,198,63);
@@ -90,6 +82,10 @@ a.map_link , a:hover.map_link{
     position:relative;
     z-index:1;
 }
+.pin_desc_map a{
+    font-family: Museo;
+    font-weight: 700;
+}
 .pin_desc_map:hover {
     background:#1b85b7;
     color: #FFFFFF;
@@ -118,10 +114,13 @@ a.map_link , a:hover.map_link{
     background:transparent;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1270px) {
     #header-AIESEC {
 
-        height:70px;
+        height: 50px !important;
+    }
+    #header-logos{
+        height: 150px !important;
     }
     #title{
 
@@ -140,8 +139,14 @@ a.map_link , a:hover.map_link{
         height: 100%;
         background: rgba(141,198,63,0.1);
     }
+    .intro-block p{
+        padding: 2% !important;
+    }
     #nav li{
         font-size: 1.5rem !important;
+    }
+    .intro-list{
+        padding: 2% 10% !important;
     }
 }
 
@@ -154,7 +159,7 @@ a.map_link , a:hover.map_link{
     width: 100%;
     height: 100%;
     text-align: center;
-    background: url(../images/bg1.jpg) 50% 50% / cover no-repeat;
+    background: url(../images/Austin.jpg) 50% 50% / cover no-repeat;
 }
 .hidden-a{
     visibility:hidden;
@@ -166,15 +171,17 @@ a.map_link , a:hover.map_link{
 }
 #intro {
     display: block;
-    padding: 2% 10%;
+    padding: 2% 15%;
     width: 100%;
     height: auto;
     overflow: hidden;
-    background: rgba(141,198,63,0.3) 50% 50% / cover no-repeat;
+    /*background: rgba(141,198,63,0.2) 50% 50% / cover no-repeat;*/
+    text-align: center;
+    background-color: rgb(245,245,245);
 }
 
 #map-row {
-    border-top: 1px solid #ccc;
+    border-top: 0px solid #ccc;
     display: block;
     padding: 0% 10%;
     display: block;
@@ -182,7 +189,9 @@ a.map_link , a:hover.map_link{
     width: 100%;
     height: 100%;
     overflow-y:hidden;
-    background: rgba(141,198,63,0.3) 50% 50% / cover no-repeat;
+    /*background: rgba(141,198,63,0.2) 50% 50% / cover no-repeat;*/
+    background-color: #fff;
+    background-color: rgb(245,245,245);
 }
 
 #header-circle {
@@ -211,13 +220,7 @@ a.map_link , a:hover.map_link{
     position: absolute;
     bottom: 0;
     left: 0;
-    height:50px;
-}
-#header-ey{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height:70px;
+    height: 70px;
 }
 
 #nav {
@@ -235,7 +238,7 @@ a.map_link , a:hover.map_link{
     display: inline-block;
     color: #fff;
     font-size: 2rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'LOBSTER';
     cursor: pointer;
     padding: 10px 0px;
 }
@@ -254,45 +257,73 @@ a.map_link , a:hover.map_link{
 
 #title {
     position: absolute;
-    font-size: 8rem;
-    font-family: "novecento wide";
+    font-size: 12rem;
+    font-family: 'LOBSTER',"novecento wide";
     font-weight: 700;
-    text-shadow: 0px 0px 30px #000;
+    text-shadow: 0px 0px 10px #fff;
     color: #fff;
 }
 
 .title {
-    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 92%;
+    padding: 10px;
+    margin: auto;
+    background-color: rgba(255,255,255,0.5);
+    margin-top: 10px;
+
 }
 
 .title span {
-    font-size: 1.6em;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'LOBSTER';
+    padding: 0;
+}
+.title p{
+    font-size: 1.9rem;
+    text-align: left;
+    padding:10px;
+    margin:0 auto;
 }
 
 p {
     font-size: 1.6rem;
-    color: #000;
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 1em 0;
-    padding: 5px;
+    color: #333;
+    font-family:Museo,comfortaa;
+    padding: 5px 0;
+    display:block;
+    word-wrap:break-word;
+    word-spacing: 0.3em;
+    font-weight: 700;
+    /*overflow: hidden;*/
+    /*white-space: nowrap;*/
+    /*text-overflow: ellipsis;*/
 }
 
 .intro-block {
 
-    padding: 2% 3%;
-
-    width: 32%;
+    padding: 1% 2%;
+    border-radius: 5px;
+    width: 32.7%;
     float: left;
-    margin: 0 0.3%;
+    margin: 15px 0.3%;
     text-align: justify;
     display: block;
     height: 100%;
-    background: rgba(141,198,63,0.1);
+    background: rgba(141,198,63,0.3);
+    box-shadow: 0px 0px 2px 2px rgba(141,198,63,0.4) inset;
 
 }
 
 .intro-block .title {
     text-align: center;
+}
+.intro-block .title span{
+    font-size: 2em;
+}
+.intro-block p{
+    font-size: 1.4em;
+    word-spacing: 0.1rem;
 }
 
 .intro-icon {
@@ -305,9 +336,12 @@ p {
 }
 
 .intro-list {
-    font-family: Helvetica;
-    font-size: 1.6rem;
-    color: #333;
+    opacity: 1;
+    font-family: comfortaa;
+    font-size: 1.2em;
+    color: #000;
+    list-style-type: a;
+    padding: 0px 10px;
 }
 .map_tooltip-up_hover{
     z-index: 0;
@@ -326,3 +360,28 @@ p {
     top:0px;
 }
 
+#header-logos{
+    position: absolute;
+    height: 240px;
+    bottom: 0px;
+    right: 0px;
+}
+
+#intro-aiesec span{
+    color: rgb(26,18,77);
+    text-shadow: 0px 0px 2px rgb(26,18,77);
+}
+#intro-aiesec p{
+    color: rgb(26,18,77) !important;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 3px rgba(26,18,77,0.39);
+    text-shadow: 0px 0px 1px rgba(26,18,77,0.5);
+}
+#intro-fl span{
+    text-shadow: 0px 0px 10px rgba(141,198,63,1);
+}
+#intro-fl p{
+    border-radius: 5px;
+    text-shadow: 0px 0px 1px rgba(141,198,63,1);
+    box-shadow: 0px 0px 3px 3px rgba(141,198,63,0.6);
+}
