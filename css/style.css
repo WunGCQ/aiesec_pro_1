@@ -512,7 +512,8 @@ p {
 }
 #AIESEC-intro .intro-list{
     font-size: 1.4em;
-    list-style-image:url(../images/globe.png);
+    /*list-style-image:url(../images/globe.png);*/
+    list-style: none;
 }
 #AIESEC-intro .intro-list li{
     height: auto;
